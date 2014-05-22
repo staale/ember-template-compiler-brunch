@@ -11,7 +11,7 @@ The ember-template-compile seems to be a well maintained project for just the co
 
 How to install:
 
-    npm install --save staale/ember-template-compiler-brunch
+    npm install --save ember-template-compiler-brunch
     
 Then, in your config.coffee:
 
