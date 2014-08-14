@@ -27,7 +27,7 @@ EmberTemplateCompilerBrunch.prototype.compile = function (data, path, callback) 
             var content = JSON.stringify(data.toString());
             template = "Ember.Handlebars.compile(" + content + ")"
         }
-        var emberPath = path.replace(this.root, '').replace(/\\/g, '/').replace(/\.[^.]+/,'');
+        var emberPath = path.replace(/\\/g, '/').replace(this.root.replace(/\\/g, '/'), '').replace(/\.[^.]+/,'');
 
         callback(null, umd("Ember.TEMPLATES['" + emberPath + "'] = " + template));
     } catch (error) {
