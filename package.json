@@ -1,6 +1,6 @@
 {
   "name": "ember-template-compiler-brunch",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Brunch plugin to compile hbs templates using ember-template-compiler",
   "main": "src/index.js",
   "scripts": {
