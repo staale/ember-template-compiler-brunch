@@ -3,18 +3,29 @@ ember-template-compiler-brunch
 
 Brunch plugin to use the ember-template-compiler for compiling handlebars templates.
 
-This brunch plugin was created to fix descrepancies in the existing brunch ember handlebars plugins. Specifically, they did not interact in a predictable manner with the npm dependencies.
+| Ember version | Plugin version |
+| ------------- | ---------------|
+| <= 1.8        | v0.9.x         |
+| >= 1.10       | v0.10.x        |
 
-This module relies entirly on npm modules. If you include it in your own project, you can freely select which version of the [ember-template-compile](https://www.npmjs.org/package/ember-template-compiler) and [handlebars](https://www.npmjs.org/package/handlebars) to use.
+I have not tested Ember 1.9, but the 0.10 branch sould work for that as well.
 
-Currently, this depends on the 1.9.0-alpha version of ember-template-compiler, to support handlebars 2.0.0, and Ember 1.9.+. To use earlier versions of Handlebars and the ember-template-compiler, switch to the 0.9 branch.
+Ember provided their ember-template-compiler as an npm module up
+until Ember 1.9. After that, the compiler was included only in the
+Ember bower dependency.
 
-The ember-template-compile seems to be a well maintained project for just the compiler part, and one that is integrated with the Ember deployment process. This means we can keep an up to date version of the ember compiler.
+The v0.10.x branch depends on ember being installed as a bower
+module. I realize that this is pretty hacky, but it is what works for
+me. Since there is no longer an npm module to depend on.
+
+This finds the ember compiler under './bower_components/ember/ember-template-compiler.js'
+
+Normally you would install ember using bower if you are using a brunch project.
 
 How to install:
 
     npm install --save ember-template-compiler-brunch
-    
+
 Then, in your config.coffee:
 
     exports.config =
@@ -27,4 +38,3 @@ Settings:
 
 * **precompile**: Wheter or not templates should be precompiled, default is false
 * **root**: Root path to strip of the template names before exposing to Ember.TEMPLATES. Defaults to "app/"
-

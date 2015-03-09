@@ -1,7 +1,7 @@
 {
   "name": "ember-template-compiler-brunch",
-  "version": "0.10.0-alpha",
-  "description": "Brunch plugin to compile hbs templates using ember-template-compiler",
+  "version": "0.10.0-alpha1",
+  "description": "Brunch plugin to compile hbs templates using ember-template-compileri from bower",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,6 @@
   "author": "Ståle Undheim",
   "license": "Apache v2",
   "dependencies": {
-    "ember-template-compiler": ">= 1.9.0-alpha",
-    "handlebars": "~2",
     "umd-wrapper": "^0.1.0"
   },
   "devDependencies": {},

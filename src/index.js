@@ -1,4 +1,5 @@
-var emberCompiler = require('ember-template-compiler');
+var sysPath = require('path');
+var emberCompiler = require(sysPath.resolve('./bower_components/ember/ember-template-compiler.js'));
 var umd = require("umd-wrapper");
 
 function EmberTemplateCompilerBrunch(config) {
